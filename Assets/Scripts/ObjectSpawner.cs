@@ -1,16 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 /// <summary>
 /// Generates objects in a line, designed to generate dangerous blocks
 /// </summary>
-public class DangerBlocksGeneration : MonoBehaviour
+public class ObjectSpawner : MonoBehaviour
 {
     /// <summary>
     /// prefab object reference
     /// </summary>
-    public GameObject DangerObjectPrefab;
+    public GameObject SpawnedObjectPrefab;
 
     /// <summary>
     /// If the property is true objects are generated
@@ -50,13 +48,13 @@ public class DangerBlocksGeneration : MonoBehaviour
     {
         if (Generate)
         {
-            if (DangerObjectPrefab == null)
+            if (SpawnedObjectPrefab == null)
             {
                 throw new System.Exception("DangerBlockPrefab link not found!");
             }
 
             //Colider size calculate from center, so this is half of objets size and i multiply it
-            float zSizeOfObjest = DangerObjectPrefab.GetComponent<BoxCollider>().size.z * 2;
+            float zSizeOfObjest = SpawnedObjectPrefab.GetComponent<BoxCollider>().size.z * 2;
 
             for (float i = 0; i < ObjectsCount; i++)
             {
@@ -70,7 +68,7 @@ public class DangerBlocksGeneration : MonoBehaviour
                     float positionZ = transform.position.z + zSizeOfObjest * i + DistanceBetweenObjects * i;
 
                     //Dynamic object generation
-                    Instantiate(DangerObjectPrefab, new Vector3(positionX, positionY, positionZ), DangerObjectPrefab.transform.rotation);
+                    Instantiate(SpawnedObjectPrefab, new Vector3(positionX, positionY, positionZ), SpawnedObjectPrefab.transform.rotation);
                 }
             }
         }
