@@ -13,7 +13,7 @@ public class MoveDangerCar : MonoBehaviour
     /// <summary>
     /// Position of the target to the cortex the object is moving
     /// </summary>
-    public float Speed = 1;
+    private float Speed = 1;
 
     /// <summary>
     /// Object movement speed
@@ -38,6 +38,7 @@ public class MoveDangerCar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Speed = CommonMovementParameters.DangerCarsSpeed;
         //self-destruct launch
         if (SelfDestroyByTime)
         {

@@ -15,7 +15,7 @@ public class MoveStaticObject : MonoBehaviour
     /// <summary>
     /// Position of the target to the cortex the object is moving
     /// </summary>
-    public float Speed = 1;
+    private float Speed = 1;
 
     /// <summary>
     /// Object movement speed
@@ -30,6 +30,7 @@ public class MoveStaticObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Speed = CommonMovementParameters.StaticObjectsSpeed;
         //self-destruct launch
         if (SelfDestroyByTime)
         {
