@@ -122,7 +122,7 @@ public class EnemyObjectDestroyer : MonoBehaviour
     /// </summary>
     private void StopEnemyCar()
     {
-        gameObject.GetComponent<MoveBlock>().Move = false;
+        gameObject.GetComponent<MoveDangerCar>().Move = false;
     }
 
     /// <summary>

@@ -61,14 +61,16 @@ public class ObjectSpawner : MonoBehaviour
                 //Generating an object if the generated number is lower or equal to the probability
                 if (Random.Range(1, 100) <= GenerationProbability)
                 {
-                    float positionX = transform.position.x;
-                    float positionY = transform.position.y;
+                    float positionX = 0;
+                    float positionY = 0;
                     //The calculation of the position of the object is based on the size of the object along 
                     //the Z axis and the distance between objects multiplied by the number of objects behind the Z axis
-                    float positionZ = transform.position.z + zSizeOfObjest * i + DistanceBetweenObjects * i;
+                    float positionZ = zSizeOfObjest * i + DistanceBetweenObjects * i;
+
+                    Vector3 currentPosition = transform.TransformPoint(new Vector3(positionX, positionY, positionZ));
 
                     //Dynamic object generation
-                    Instantiate(SpawnedObjectPrefab, new Vector3(positionX, positionY, positionZ), SpawnedObjectPrefab.transform.rotation);
+                    Instantiate(SpawnedObjectPrefab, currentPosition, SpawnedObjectPrefab.transform.rotation);
                 }
             }
         }

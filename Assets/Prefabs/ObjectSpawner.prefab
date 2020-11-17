@@ -111,6 +111,6 @@ MonoBehaviour:
   SpawnedObjectPrefab: {fileID: 0}
   Generate: 1
   ObjectsCount: 20
-  DistanceBetweenObjects: 0
+  DistanceBetweenObjects: 5
   SecondsSpawnFrequency: 2
-  GenerationProbability: 3
+  GenerationProbability: 100
