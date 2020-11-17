@@ -43,7 +43,7 @@ public class MoveDangerCar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Speed = CommonMovementParameters.DangerCarsSpeed;
+        Speed = CommonMovementParameters.DangerCarsSpeed + Random.Range(0f, 1f);
         //self-destruct launch
         if (SelfDestroyByTime)
         {

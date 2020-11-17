@@ -130,4 +130,4 @@ MonoBehaviour:
   Move: 1
   MoveDirection: {x: 0, y: 0, z: -1}
   SelfDestroyByTime: 1
-  SelfDestroyTime: 4
+  SelfDestroyTime: 8

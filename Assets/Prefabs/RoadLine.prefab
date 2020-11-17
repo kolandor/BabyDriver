@@ -97,9 +97,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Move: 1
   MoveDirection: {x: 0, y: -1, z: 0}
-  Speed: 4
   SelfDestroyByTime: 1
-  SelfDestroyTime: 4
+  SelfDestroyTime: 8
 --- !u!65 &-7315987635697258518
 BoxCollider:
   m_ObjectHideFlags: 0

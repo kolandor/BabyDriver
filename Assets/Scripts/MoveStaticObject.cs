@@ -16,11 +16,6 @@ public class MoveStaticObject : MonoBehaviour
     public Vector3 MoveDirection = Vector3.zero;
 
     /// <summary>
-    /// Position of the target to the cortex the object is moving
-    /// </summary>
-    private float Speed = 1;
-
-    /// <summary>
     /// Object movement speed
     /// </summary>
     public bool SelfDestroyByTime = true;
@@ -33,7 +28,6 @@ public class MoveStaticObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Speed = CommonMovementParameters.StaticObjectsSpeed;
         //self-destruct launch
         if (SelfDestroyByTime)
         {
@@ -52,6 +46,6 @@ public class MoveStaticObject : MonoBehaviour
 
     void MoveForward()
     {
-        transform.Translate(MoveDirection * Time.deltaTime * Speed);
+        transform.Translate(MoveDirection * Time.deltaTime * CommonMovementParameters.StaticObjectsSpeed);
     }
 }
