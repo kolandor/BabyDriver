@@ -131,6 +131,6 @@ public class EnemyObjectDestroyer : MonoBehaviour
     /// </summary>
     private void ChangeScene()
     {
-        SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene("Menu");
     }
 }

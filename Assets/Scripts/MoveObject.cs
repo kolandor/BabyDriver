@@ -68,12 +68,14 @@ public class MoveObject : MonoBehaviour
                 MoveObjectToTarget();
 
                 GameObject.Find("ScoreText").GetComponent<Text>().text = $"Score: {CommonMovementParameters.PlayerScore += Time.deltaTime}";
-                
-                if(Mathf.RoundToInt(CommonMovementParameters.PlayerScore) % 10 == 0 && CommonMovementParameters.DangerCarsSpeed < 8f)
+
+                /*int score = ((int)CommonMovementParameters.PlayerScore);
+
+                if (score > 0 && score % 10 == 0 && CommonMovementParameters.DangerCarsSpeed < 8f)
                 {
                     CommonMovementParameters.StaticObjectsSpeed += 0.2f;
                     CommonMovementParameters.DangerCarsSpeed += 0.2f;
-                }
+                }*/
             }
         }
     }
