@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 252424515}
   - component: {fileID: 252424514}
   m_Layer: 0
-  m_Name: CubeDorderLeft
+  m_Name: DorderLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 685485247}
   - component: {fileID: 685485246}
   m_Layer: 0
-  m_Name: PlaneSidewalkRight
+  m_Name: SidewalkRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -384,7 +384,7 @@ GameObject:
   - component: {fileID: 705507995}
   - component: {fileID: 705507994}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: DayLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -478,7 +478,7 @@ GameObject:
   - component: {fileID: 824918289}
   - component: {fileID: 824918288}
   m_Layer: 0
-  m_Name: PlaneGround
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -577,7 +577,7 @@ GameObject:
   - component: {fileID: 887737016}
   - component: {fileID: 887737015}
   m_Layer: 0
-  m_Name: CubeBorderRight
+  m_Name: BorderRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -755,7 +755,7 @@ GameObject:
   - component: {fileID: 1013894450}
   - component: {fileID: 1013894449}
   m_Layer: 0
-  m_Name: CubeBorderRight
+  m_Name: BorderRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -850,7 +850,7 @@ GameObject:
   - component: {fileID: 1733641492}
   - component: {fileID: 1733641491}
   m_Layer: 0
-  m_Name: PlaneRoad
+  m_Name: Road
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -879,7 +879,7 @@ MeshCollider:
   m_GameObject: {fileID: 1733641489}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -946,7 +946,7 @@ GameObject:
   - component: {fileID: 1881101154}
   - component: {fileID: 1881101153}
   m_Layer: 0
-  m_Name: PlaneSidewalkLeft
+  m_Name: SidewalkLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1044,7 +1044,7 @@ GameObject:
   - component: {fileID: 1997265768}
   - component: {fileID: 1997265767}
   m_Layer: 0
-  m_Name: CubeDorderLeft
+  m_Name: DorderLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
