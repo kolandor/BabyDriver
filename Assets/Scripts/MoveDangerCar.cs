@@ -11,6 +11,11 @@ public class MoveDangerCar : MonoBehaviour
     public bool Move = true;
 
     /// <summary>
+    /// Movement direction
+    /// </summary>
+    public Vector3 MoveDirection = Vector3.zero;
+
+    /// <summary>
     /// Position of the target to the cortex the object is moving
     /// </summary>
     private float Speed = 1;

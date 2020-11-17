@@ -10,6 +10,9 @@ public class MoveStaticObject : MonoBehaviour
     /// </summary>
     public bool Move = true;
 
+    /// <summary>
+    /// Movement direction
+    /// </summary>
     public Vector3 MoveDirection = Vector3.zero;
 
     /// <summary>
