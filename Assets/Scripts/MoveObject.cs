@@ -36,11 +36,16 @@ public class MoveObject : MonoBehaviour
     /// </summary>
     public float SelfDeleteTimeByGoalTrget = 0f;
 
+    public bool isRight = false;
+    public bool isLeft = false;
+
     // Start is called before the first frame update
     private void Start()
     {
         CommonMovementParameters.PlayerScore = 0;
-    }
+        CommonMovementParameters.StaticObjectsSpeed = 4f;
+        CommonMovementParameters.DangerCarsSpeed = 4f;
+}
 
     // Update is called once per frame
     private void Update()
@@ -50,12 +55,12 @@ public class MoveObject : MonoBehaviour
             //The condition is true if
             if (Move)
             {
-                if (Input.GetKey(KeyCode.D) && TargetPosition.position.x < 0.86f)
+                if (Input.GetKey(KeyCode.D)  || isRight && TargetPosition.position.x < 0.86f)
                 {
                     float currentCarTargetSpeed = Time.deltaTime * (Speed + 0.5f);
                     TargetPosition.transform.Translate(Vector3.right * (Time.deltaTime * Speed));
                 }
-                if (Input.GetKey(KeyCode.A) && TargetPosition.position.x > -0.86f)
+                if (Input.GetKey(KeyCode.A) || isLeft && TargetPosition.position.x > -0.86f)
                 {
                     float currentCarTargetSpeed = Time.deltaTime * (Speed + 0.5f);
                     TargetPosition.transform.Translate(Vector3.left * (Time.deltaTime * Speed));
@@ -78,6 +83,16 @@ public class MoveObject : MonoBehaviour
                 }*/
             }
         }
+    }
+
+    public void Left()
+    {
+        isLeft = !isLeft;
+    }
+
+    public void Right()
+    {
+        isRight = !isRight;
     }
 
     /// <summary>
@@ -105,7 +120,7 @@ public class MoveObject : MonoBehaviour
         //the position of the object to which the script is attached
         Vector3 positionFrom = transform.position;
         //target position
-        Vector3 positionTo = new Vector3(TargetPosition.position.x, TargetPosition.position.y, transform.position.z);// TargetPosition.position;
+        Vector3 positionTo = new Vector3(TargetPosition.position.x, TargetPosition.position.y, -6.246f);// TargetPosition.position;
         //calculation of object speed relative to frame rate
         float currentCarSpeed = Time.deltaTime * (Speed - 0.3f);
 
