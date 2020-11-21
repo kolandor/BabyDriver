@@ -9,10 +9,11 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(CommonMovementParameters.PlayerScore > CommonMovementParameters.MaxPlayerScore)
+        if(CommonGameData.PlayerScore > CommonGameData.MaxPlayerScore)
         {
-            CommonMovementParameters.MaxPlayerScore = CommonMovementParameters.PlayerScore;
-            GameObject.Find("TextScore").GetComponent<Text>().text = $"Max Score: {CommonMovementParameters.MaxPlayerScore}";
+            CommonGameData.MaxPlayerScore = CommonGameData.PlayerScore;
+            Text scoreText = GameObject.Find("TextScore").GetComponent<Text>();
+            scoreText.text = $"Max Score: {CommonGameData.MaxPlayerScore}";
         }
     }
 

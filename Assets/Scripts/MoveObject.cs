@@ -42,10 +42,8 @@ public class MoveObject : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        CommonMovementParameters.PlayerScore = 0;
-        CommonMovementParameters.StaticObjectsSpeed = 4f;
-        CommonMovementParameters.DangerCarsSpeed = 4f;
-}
+
+    }
 
     // Update is called once per frame
     private void Update()
@@ -55,7 +53,7 @@ public class MoveObject : MonoBehaviour
             //The condition is true if
             if (Move)
             {
-                if (Input.GetKey(KeyCode.D)  || isRight && TargetPosition.position.x < 0.86f)
+                if (Input.GetKey(KeyCode.D) || isRight && TargetPosition.position.x < 0.86f)
                 {
                     float currentCarTargetSpeed = Time.deltaTime * (Speed + 0.5f);
                     TargetPosition.transform.Translate(Vector3.right * (Time.deltaTime * Speed));
@@ -66,21 +64,10 @@ public class MoveObject : MonoBehaviour
                     TargetPosition.transform.Translate(Vector3.left * (Time.deltaTime * Speed));
                 }
 
-
                 //turn to the object face (along the Z axis)
                 ExpandToTarget();
 
                 MoveObjectToTarget();
-
-                GameObject.Find("ScoreText").GetComponent<Text>().text = $"Score: {CommonMovementParameters.PlayerScore += Time.deltaTime}";
-
-                /*int score = ((int)CommonMovementParameters.PlayerScore);
-
-                if (score > 0 && score % 10 == 0 && CommonMovementParameters.DangerCarsSpeed < 8f)
-                {
-                    CommonMovementParameters.StaticObjectsSpeed += 0.2f;
-                    CommonMovementParameters.DangerCarsSpeed += 0.2f;
-                }*/
             }
         }
     }

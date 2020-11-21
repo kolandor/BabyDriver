@@ -112,7 +112,7 @@ public class EnemyObjectDestroyer : MonoBehaviour
         MoveObject move = _targetObject.GetComponent<MoveObject>();
         if (move != null)
         {
-            CommonMovementParameters.StaticObjectsSpeed = 0;
+            CommonGameData.StaticObjectsSpeed = 0;
             move.Move = false;
             Invoke("StopEnemyCar", 0.5f);
         }

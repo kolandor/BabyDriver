@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1938811383248136385}
   - component: {fileID: 3674019874025910848}
   - component: {fileID: -2111747186813695750}
+  - component: {fileID: -8035468358338941611}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -105,9 +106,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetPosition: {fileID: 0}
   Move: 1
-  Speed: 2
+  Speed: 1
   GoalDistanceFromTargetEvent: 0.5
   SelfDeleteTimeByGoalTrget: 0
+  isRight: 0
+  isLeft: 0
 --- !u!54 &1938811383248136385
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -151,6 +154,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.21050951, y: 0.20135833, z: 0.40000004}
   m_Center: {x: -0.002369091, y: 0.061632015, z: 0}
+--- !u!114 &-8035468358338941611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513483801980202374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 444c96eb4ea33f94d9a83443d0adc344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3257874182488175745
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,6 @@ public class MoveMonet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.TransformDirection(Vector3.forward * Time.deltaTime * CommonMovementParameters.StaticObjectsSpeed);
+        transform.TransformDirection(Vector3.forward * Time.deltaTime * CommonGameData.StaticObjectsSpeed);
     }
 }

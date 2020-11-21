@@ -46,6 +46,6 @@ public class MoveStaticObject : MonoBehaviour
 
     void MoveForward()
     {
-        transform.Translate(MoveDirection * Time.deltaTime * CommonMovementParameters.StaticObjectsSpeed);
+        transform.Translate(MoveDirection * Time.deltaTime * CommonGameData.StaticObjectsSpeed);
     }
 }
