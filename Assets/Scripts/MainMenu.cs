@@ -12,9 +12,9 @@ public class MainMenu : MonoBehaviour
         if(CommonGameData.PlayerScore > CommonGameData.MaxPlayerScore)
         {
             CommonGameData.MaxPlayerScore = CommonGameData.PlayerScore;
-            Text scoreText = GameObject.Find("TextScore").GetComponent<Text>();
-            scoreText.text = $"Max Score: {CommonGameData.MaxPlayerScore}";
         }
+        Text scoreText = GameObject.Find("TextScore").GetComponent<Text>();
+        scoreText.text = $"Max Score: {CommonGameData.MaxPlayerScore}";
     }
 
     public void Game()
