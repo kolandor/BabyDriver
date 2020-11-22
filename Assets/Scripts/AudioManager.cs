@@ -65,4 +65,9 @@ public class AudioManager : MonoBehaviour
 
         sound.Source.Stop();
     }
+
+    public Sound GetSound(string soundName)
+    {
+        return Sounds.First(s => s.Name == soundName);
+    }
 }

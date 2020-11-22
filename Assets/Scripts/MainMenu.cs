@@ -19,11 +19,13 @@ public class MainMenu : MonoBehaviour
 
     public void Game()
     {
+        AudioManager.Manager.Play("ButtonCilick");
         SceneManager.LoadScene("Game");
     }
 
     public void Exit()
     {
+        AudioManager.Manager.Play("ButtonCilick");
         Application.Quit(0);
     }
 }

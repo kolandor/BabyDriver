@@ -82,6 +82,8 @@ public class EnemyObjectDestroyer : MonoBehaviour
             &&_targetObject != null
             && other.gameObject.name == TargetObjectName)//If the name of the object this object collides with matches the target
         {
+            AudioManager.Manager.Play("CarCrash");
+
             if (DestroyTargetObjectByGoalTrget)
             {
                 Destroy(_targetObject, DestroyTimeByGoalTrget);

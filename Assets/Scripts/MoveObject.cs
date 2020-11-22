@@ -39,10 +39,15 @@ public class MoveObject : MonoBehaviour
     public bool isRight = false;
     public bool isLeft = false;
 
+    private Sound _carEngineSound;
+    private Sound _carEngineStartSound;
+
     // Start is called before the first frame update
     private void Start()
     {
-
+        _carEngineStartSound = AudioManager.Manager.GetSound("CarEngineStart");
+        _carEngineStartSound.Source.Play();
+        _carEngineSound = AudioManager.Manager.GetSound("CarEngine");
     }
 
     // Update is called once per frame
@@ -68,6 +73,15 @@ public class MoveObject : MonoBehaviour
                 ExpandToTarget();
 
                 MoveObjectToTarget();
+
+                if(!_carEngineStartSound.Source.isPlaying && !_carEngineSound.Source.isPlaying)
+                {
+                    _carEngineSound.Source.Play();
+                }
+            }
+            else
+            {
+                _carEngineSound.Source.Stop();
             }
         }
     }
