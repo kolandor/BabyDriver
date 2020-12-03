@@ -58,12 +58,13 @@ public class MoveObject : MonoBehaviour
             //The condition is true if
             if (Move)
             {
-                if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || isRight) && TargetPosition.position.x < 0.86f)
+                float horizontalInput = Input.GetAxis("Horizontal");
+                if ((horizontalInput > 0f || isRight) && TargetPosition.position.x < 0.86f)
                 {
                     float currentCarTargetSpeed = Time.deltaTime * (Speed + 0.5f);
                     TargetPosition.transform.Translate(Vector3.right * (Time.deltaTime * Speed));
                 }
-                if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.RightArrow) || isLeft) && TargetPosition.position.x > -0.86f)
+                if ((horizontalInput < 0f || isLeft) && TargetPosition.position.x > -0.86f)
                 {
                     float currentCarTargetSpeed = Time.deltaTime * (Speed + 0.5f);
                     TargetPosition.transform.Translate(Vector3.left * (Time.deltaTime * Speed));
